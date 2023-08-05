@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-localize-app": {
+      "i18n": {
+        "sourceLocale": "tr",
+        "locales": {
+          "en-US": "src/locale/translate.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "tr",
+              "en-US"
+            ],
             "outputPath": "dist/my-localize-app",
             "index": "src/index.html",
             "main": "src/main.ts",
